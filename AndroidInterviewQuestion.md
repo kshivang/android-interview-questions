@@ -12,7 +12,7 @@ Intent intent = new Intent(this, MyTestActivity.class);
         startActivity(intent);
 ```
 
-**Q. What are Intent Intent filters?**
+**Q. What are Intent filters?**
 
 **Ans:** Intent filters are filterout the intents.
 
