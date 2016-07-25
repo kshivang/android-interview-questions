@@ -12,6 +12,14 @@ Intent intent = new Intent(this, MyTestActivity.class);
         startActivity(intent);
 ```
 
+**__Ques__: What are expicit intent and implicit intent?**
+
+**Ans:** Android Explicit intent specifies the component to be invoked from activity. In other 
+words, we can call another activity in android by explicit intent.
+
+Implicit Intent doesn't specifiy the component. In such case, intent provides information of 
+available components provided by the system that is to be invoked.
+
 **__Ques__: What are Intent filters?**
 
 **Ans:** Intent filters are filterout the intents.
