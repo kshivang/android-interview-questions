@@ -2,7 +2,7 @@
 
 ## Basic Question
 
-**Q. How to launch an activity in android?**
+**__Ques__: How to launch an activity in android?**
 
 **Ans:** Using with intent, we can launch an activity.
 
@@ -12,7 +12,7 @@ Intent intent = new Intent(this, MyTestActivity.class);
         startActivity(intent);
 ```
 
-**Q. What are Intent filters?**
+**__Ques__: What are Intent filters?**
 
 **Ans:** Intent filters are filterout the intents.
 
@@ -23,7 +23,7 @@ service can do and what types of broadcasts a receiver can handle. It opens the 
 receiving intents of the advertised type, while filtering out those that are not meaningful for 
 the component.
 
-**Q. What is singleton class in android?**
+**__Ques__: What is singleton class in android?**
 
 **Ans:** A class which can create only an object, that object can be share able to all other
 class
@@ -33,7 +33,7 @@ This is very important class for memory and task managemet.
 __For example, Volley RequestQueue should be implemented using Singleton, so that we would have
 single queue for entire app cycle__
 
-**Q. What is nine-patch images tool in android?**
+**__Ques__: What is nine-patch images tool in android?**
 
 **Ans:** We can change bitmap images in nine sections as four corners,four edges and an axis
 
@@ -42,7 +42,7 @@ This is a important tool for dynamic images.
 __For example, Message bubble of whatsapp__
 
 
-**Q. What is a Sticky Intent in android?**
+**__Ques__: What is a Sticky Intent in android?**
 
 **Ans:** Sticky Intent is also a type of intent which allows the communication between a function
 and a service. 
@@ -51,19 +51,19 @@ __For example,sendStickyBroadcast() is perform the operations after completion o
 intent also.__
 
 
-**Q. Define the appliction resource file in android?**
+**__Ques__: Define the appliction resource file in android?**
 
 **Ans:** JSON,XML bitmap.etc are application resources.You can injected these files to build process 
 and can load them from the code.
 
 
-**Q. How to update UI from a service in android?
+**__Ques__: How to update UI from a service in android?**
 
 **Ans:** Use a dynamic broadcast receiver in the activity, and send a broadcast from the service. 
 Once the dynamic receiver is triggered update UI from that receiver.
 
 
-**Q. What are the type of flags to run an application in android?**
+**__Ques__: What are the type of flags to run an application in android?**
 
 **Ans:** 
 ```java
@@ -90,7 +90,7 @@ This produces the same behavior as the "singleTop" launchMode value, discussed i
 
 ## Tricky Question
 
-**Q. Under what condition could the code sample below crash your appliction?**
+**__Ques__: Under what condition could the code sample below crash your appliction?**
 **How would you modify the code to avoid this potential problem? Explain your answer.**
 
 ```java
@@ -120,7 +120,7 @@ if (sendIntent.resolveActivity(getPackageManager()) != null) {
 ```
 
 
-**Q. The last callback in the lifecycle of an activity is onDestroy(). The system calls this method on 
+**__Ques__: The last callback in the lifecycle of an activity is onDestroy(). The system calls this method on 
 your activity as the final signal that your activity instance is being completely removed from the system memory 
 Usually, the system will call onPause() and onStop() before calling onDestroy(). Describe a scenario, though, 
 where onPause() and onStop() would not be invoked.**
@@ -133,7 +133,7 @@ Although onDestroy() is the last callback in the lifecycle of an activity, it is
 callback may not always be called and should not be relied upon to destroy resources. It is better have the 
 resources created in onStart() and onResume(), and have them destroyed in onStop() and onPause, respectively.
 
-**Q. Suppose that you are starting a service in an Activity as follows:**
+**__Ques__: Suppose that you are starting a service in an Activity as follows:**
 
 ```java
 Intent service = new Intent(context, MyService.class);             
@@ -158,7 +158,7 @@ using an an asynchronous response mechanism.
 **NOTE WELL:** Accessing the network from the UI thread throws a runtime exception in newer Android versions which 
 causes the app to crash.
 
-**Q. Normally, in the process of carrying out a screen reorientation, the Android platform tears down the foreground 
+**__Ques__: Normally, in the process of carrying out a screen reorientation, the Android platform tears down the foreground 
 activity and recreates it, restoring each of the view values in the activity's layout.**
 
 **In an app you're working on, you notice that a view's value is not being restored after screen reorientation. What
