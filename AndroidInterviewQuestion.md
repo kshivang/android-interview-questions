@@ -6,9 +6,11 @@
 
 ...**Ans:** Using with intent, we can launch an activity.
 
-```Intent intent = new Intent(this, MyTestActivity.class);
+```java
+Intent intent = new Intent(this, MyTestActivity.class);
 
-        startActivity(intent);```
+        startActivity(intent);
+```
 
 ...**Q. What are Intent Intent filters?
 
@@ -64,9 +66,11 @@
 ...**Q. What are the type of flags to run an application in android?**
 
 ...**Ans:** ..
-...`FLAG_ACTIVITY_NEW_TASK`..
-...` FLAG_ACTIVITY_CLEAR_TOP`..
-...` FLAG_ACTIVITY_SINGLE_TOP`
+```java
+FLAG_ACTIVITY_NEW_TASK
+FLAG_ACTIVITY_CLEAR_TOP
+FLAG_ACTIVITY_SINGLE_TOP
+```
 
 ...`FLAG_ACTIVITY_NEW_TASK`: Start the activity in a new task. If a task is already running for the ..
 ...activity you are now starting, that task is brought to the foreground with its last state restored ..
@@ -89,11 +93,13 @@
 ...**Q. Under what condition could the code sample below crash your appliction?**..
 ...**How would you modify the code to avoid this potential problem? Explain your answer.**
 
-```Intent sendIntent = new Intent();
+```java
+Intent sendIntent = new Intent();
     sendIntent.setAction(Intent.ACTION_SEND);
         sendIntent.putExtra(Intent.EXTRA_TEXT, textMessage);
             sendIntent.setType(HTTP.PLAIN_TEXT_TYPE); // "text/plain" MIME type
-                startActivity(sendIntent);```
+                startActivity(sendIntent);
+```
 
 ...**Ans:** An implicit intent specifies an action that can invoke any app on the device able to perform ..
 ...the action. Using an implicit intent is useful when your app cannot perform the action, but other apps ..
@@ -105,11 +111,13 @@
 ...you should first verify that there is at least one application registered in the system that can handle ..
 ...the intent. To do this use resolveActivity() on your intent object:
 
-```// Verify that there are applications registered to handle this intent
+```java
+// Verify that there are applications registered to handle this intent
 // (resolveActivity returns null if none are registered)
 if (sendIntent.resolveActivity(getPackageManager()) != null) {
     startActivity(sendIntent);
-} ```
+} 
+```
 
 
 ...**Q. The last callback in the lifecycle of an activity is onDestroy(). The system calls this method on ..
@@ -127,9 +135,11 @@ if (sendIntent.resolveActivity(getPackageManager()) != null) {
 
 **Q. Suppose that you are starting a service in an Activity as follows:**
 
-```Intent service = new Intent(context, MyService.class);             
+```java
+Intent service = new Intent(context, MyService.class);             
 startService(service);
-where MyService accesses a remote server via an Internet connection.```
+```
+where MyService accesses a remote server via an Internet connection.
 
 ...**If the Activity is showing an animation that indicates some kind of progress, what issue might you encounter and..
 ...how could you address it?**
