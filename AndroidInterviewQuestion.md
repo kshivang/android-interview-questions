@@ -96,9 +96,9 @@ This produces the same behavior as the "singleTop" launchMode value, discussed i
 ```java
 Intent sendIntent = new Intent();
     sendIntent.setAction(Intent.ACTION_SEND);
-        sendIntent.putExtra(Intent.EXTRA_TEXT, textMessage);
-            sendIntent.setType(HTTP.PLAIN_TEXT_TYPE); // "text/plain" MIME type
-                startActivity(sendIntent);
+    sendIntent.putExtra(Intent.EXTRA_TEXT, textMessage);
+    sendIntent.setType(HTTP.PLAIN_TEXT_TYPE); // "text/plain" MIME type
+    startActivity(sendIntent);
 ```
 
 **Ans:** An implicit intent specifies an action that can invoke any app on the device able to perform 
